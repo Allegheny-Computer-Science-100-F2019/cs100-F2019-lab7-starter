@@ -46,7 +46,7 @@ public class CommandLineGeometer {
     System.out.println("The volume is equal to " + sphereVolume + ".");
     System.out.println();
 
-    shape = GeometricShape.triangle;
+    // TODO: Declare the type of shape
 
     int firstSide;
     firstSide = scanner.nextInt();
@@ -67,7 +67,7 @@ public class CommandLineGeometer {
     System.out.println("The area is equal to " + triangleArea + ".");
     System.out.println();
 
-    shape = GeometricShape.cylinder;
+    // TODO: Declare the type of shape
 
     System.out.println("I am reading in the radius for the " + shape + ".");
     radius = scanner.nextDouble();
