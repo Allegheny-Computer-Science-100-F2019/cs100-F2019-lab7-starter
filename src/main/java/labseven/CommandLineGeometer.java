@@ -5,28 +5,10 @@ import java.io.FileNotFoundException;
 import java.util.Date;
 import java.util.Scanner;
 
-// NOTE: All of these comments are defaults
-
-/** This class has a method that computes the distance to the moon in yards.
- * The first line displays the name of the programmer and the date. Then, the
- * program's main method stores some values in variables and performs a
- * computation for the number of yards to the moon. Ultimately, the class can
- * display the number of yards to the moon.
- *
- * <p>Bugs: This program has no known bugs, but is missing source code
- *
- * @author Gregory M. Kapfhammer
- */
-
 public class CommandLineGeometer {
 
   private enum GeometricShape { sphere, triangle, cylinder }
 
-  /** This class has a method that computes the distance to the moon in yards.
-   * display the number of yards to the moon.
-   *
-   * @author Gregory M. Kapfhammer
-   */
   public static void main(String[] args) {
 
     // display the welcome message
@@ -48,8 +30,10 @@ public class CommandLineGeometer {
     // specify the first file for which we will calculate
     GeometricShape shape = GeometricShape.sphere;
 
-    // NOTE: Add comments to all of the remaining code!
-    // NOTE: Please add at least one comment for each block of code
+    // TODO: Add comments to all of the remaining code!
+    // TODO: Please add at least one comment for each block of code
+    // TODO: Check all of this code to ensure that it is correct
+    // TODO: Modify and/or add code to this file as needed
 
     double radius;
     radius = scanner.nextDouble();
