@@ -1,0 +1,65 @@
+---
+name: cs100-F2019-lab7
+break: true
+indent: 4
+---
+
+# Learn more about GatorGrader and its supported checks by visiting this web site:
+# https://github.com/GatorEducator/gatorgrader
+
+# Explanation:
+# --> a check without an "--exact" runs a count for an entity as an "at least"
+# --> checks below a file in a specified directory are for that specific file and directory
+# --> checks that appear stand-alone are for an entire Git repository
+
+# --> check the source code for various characteristics
+src/main:
+    java:
+        labseven/CommandLineGeometer.java:
+            ConfirmFileExists
+            CountSingleLineComments --language Java --count 4
+            CountMultipleLineComments --language Java --count 2 --exact
+            MatchFileFragment --fragment "TODO" --count 0 --exact
+            MatchFileFragment --fragment "Add Your Name Here" --count 0 --exact
+            MatchFileFragment --fragment "package labseven;" --count 1 --exact
+            MatchFileFragment --fragment "import java.io.File;" --count 1 --exact
+            MatchFileFragment --fragment "import java.util.Date;" --count 1 --exact
+            MatchFileFragment --fragment "import java.io.FileNotFoundException;" --count 1 --exact
+            MatchFileFragment --fragment "new Date()" --count 1 --exact
+            MatchFileFragment --fragment "println(" --count 20
+            MatchFileFragment --fragment "public class CommandLineGeometer" --count 1
+            MatchFileFragment --fragment "shape = GeometricShape.sphere;" --count 1
+            MatchFileFragment --fragment "shape = GeometricShape.triangle;" --count 1
+
+# --> check the source code for various characteristics
+src/main:
+    java:
+        labseven/GeometricCalculator.java:
+            ConfirmFileExists
+            CountSingleLineComments --language Java --count 4
+            CountMultipleLineComments --language Java --count 4 --exact
+            MatchFileFragment --fragment "TODO" --count 0 --exact
+            MatchFileFragment --fragment "Add Your Name Here" --count 0 --exact
+            MatchFileFragment --fragment "package labseven;" --count 1 --exact
+            MatchFileFragment --fragment "import java.io.File;" --count 0 --exact
+            MatchFileFragment --fragment "import java.util.Date;" --count 0 --exact
+            MatchFileFragment --fragment "import java.io.FileNotFoundException;" --count 0 --exact
+            MatchFileFragment --fragment "new Date()" --count 0 --exact
+            MatchFileFragment --fragment "println(" --count 0 --exact
+            MatchFileFragment --fragment "public class GeometricCalculator" --count 1
+
+# --> check the technical writing for various characteristics
+writing/reflection.md:
+    ConfirmFileExists
+    CountFileWords --count 400
+    CountMarkdownTags --tag "heading" --count 6 --exact
+    CountMarkdownTags --tag "code_block" --count 1 --exact
+    MatchFileFragment --fragment "Add Your Name Here" --count 0 --exact
+
+# --> check that the number of commits in the Git repository is beyond a threshold
+CountCommits --count 10
+
+# --> check that the program executes correctly and produces exactly the specified lines of output
+ExecuteCommand --command "gradle build"
+ExecuteCommand --command "gradle -q --console plain run"
+CountCommandOutput --command "gradle -q --console plain run" --count 15 --exact
